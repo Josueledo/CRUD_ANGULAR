@@ -1,0 +1,29 @@
+<div class="container">
+  <button class="new" routerLink="/customer">Post New Customer</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (customer of customers; track $index) {
+      <tr>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.phone }}</td>
+        <td>
+          <button class="btn-update" routerLink="/customer/{{ customer.id }}">
+            Update
+          </button>
+          <button class="btn-delete" (click)="deleteCustomer(customer.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

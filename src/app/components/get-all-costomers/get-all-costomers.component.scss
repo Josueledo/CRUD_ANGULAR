@@ -1,0 +1,54 @@
+@import "../../../styles.scss";
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: $background;
+  button {
+    padding: 10px 15px;
+    background-color: $main;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-bottom: 20px;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      border: 1px solid white;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    th,
+    td {
+      border: 1px solid $main;
+      padding: 8px;
+    }
+    thead {
+      background-color: $main;
+      tr {
+        th {
+          color: white;
+        }
+      }
+    }
+    tbody {
+      background-color: $form;
+      tr {
+        color: white;
+      }
+      td {
+        button {
+          margin-left: 10px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
