@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const BASIC_URL = ["https://18.116.45.88:8080"]
+const BASIC_URL = ["http://18.116.45.88:8080"]
 
 @Injectable({
   providedIn: 'root',
